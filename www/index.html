@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="contacto">
+<head>
+	<meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <title>Corporación Instituto Ciry</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-controller="ContactoController">
+	<nav class="navbar navbar-default">
+		<div class="container text-center">
+    		<div class="navbar-header">
+    			<img src="img/logo.png"/>
+    		</div>
+    		<h1>Corporación Instituto Ciry</h1>
+		</div>
+	</nav>
+	<div class="container app">
+		<h2 class="text-center">Contacto</h2>
+		<form name="formContacto" ng-submit="enviarContacto()">
+			<div class="form-group">
+				<label for="acudiente" class="required">Nombre Acudiente:</label>
+				<input type="text" class="form-control" name="acudiente" id="acudiente" placeholder="Nombre acudiente" required ng-model="contacto.acudiente"/>
+			</div>
+			<div class="form-group">
+				<label for="email" class="required">Email Acudiente:</label>
+				<input type="email" class="form-control" name="email" id="email" placeholder="Email Acudiente" required ng-model="contacto.email"/>
+			</div>
+			<div class="form-group">
+				<label for="estudiante">Nombre Estudiante:</label>
+				<input type="text" class="form-control" name="estudiante" id="estudiante" placeholder="Nombre Estudiante" ng-model="contacto.estudiante"/>
+			</div>
+			<div class="form-group">
+				<label for="curso">Curso Estudiante:</label>
+				<input type="text" class="form-control" name="curso" id="curso" placeholder="Curso Estudiante" ng-model="contacto.curso"/>
+			</div>
+			<div class="form-group">
+				<label for="asunto" class="required">Asunto:</label>
+				<input type="text" class="form-control" name="asunto" id="asunto" placeholder="Asunto" ng-model="contacto.asunto" required/>
+			</div>
+			<div class="form-group">
+				<label for="mensaje" class="required">Mensaje:</label>
+				<textarea class="form-control" name="mensaje" id="mensaje" placeholder="Mensaje" ng-model="contacto.mensaje" rows="5" required></textarea>
+			</div>
+			<div class="form-group text-center">
+				<input type="submit" class="btn btn-large btn-success btn-lg btn-block" value="Enviar"/>
+			</div>
+		</form>
+	</div>
+	<footer class="container-fluid bg-4 text-center">
+		<p>Powered By <a href="http://www.softcomputo.com.co"><img src="img/softcomputo.png" width="130px"/></a></p>
+	</footer>
+	<script type="text/javascript" src="js/jquery-3.1.1.slim.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
