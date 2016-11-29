@@ -1,5 +1,5 @@
-var email_destino = "contacto@corpinstitutociry.info";
-var url_backend = "https://corpinstitutociry.info/mail.php";
+var email_destino = "contacto@ciry.edu.co";
+var url_backend = "https://ciry.edu.co/mail.php";
 
 var app = angular.module('contacto', []);
 
